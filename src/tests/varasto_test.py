@@ -57,7 +57,7 @@ class TestVarasto(unittest.TestCase):
     def test_lisaa_nega(self):
         self.varasto.lisaa_varastoon(-999)
 
-        self.assertAlmostEqual(self.varasto.saldo, 1)
+        self.assertAlmostEqual(self.varasto.saldo, 0)
     
     def test_ota_nega(self):
         self.varasto.ota_varastosta(-899)
