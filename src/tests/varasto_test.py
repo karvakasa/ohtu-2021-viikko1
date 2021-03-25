@@ -53,19 +53,19 @@ class TestVarasto(unittest.TestCase):
         self.varasto.lisaa_varastoon(999)
 
         self.assertAlmostEqual(self.varasto.saldo, 10)
-    
+
     def test_lisaa_nega(self):
         self.varasto.lisaa_varastoon(-999)
 
         self.assertAlmostEqual(self.varasto.saldo, 0)
-    
+
     def test_ota_nega(self):
         self.varasto.ota_varastosta(-899)
 
         self.assertAlmostEqual(self.varasto.saldo, 0)
-    
+
     def test_ylivuoto(self):
-        self.varasto = Varasto(12,50)
+        self.varasto = Varasto(12, 50)
 
         self.assertAlmostEqual(self.varasto.saldo, 12)
 
@@ -75,10 +75,6 @@ class TestVarasto(unittest.TestCase):
         self.assertAlmostEqual(self.varasto.saldo, -50)
 
     def test_ali_saldo(self):
-        self.varasto = Varasto(12,-50)
+        self.varasto = Varasto(12, -50)
 
         self.assertAlmostEqual(self.varasto.saldo, 0)
-    
-    
-
-    
